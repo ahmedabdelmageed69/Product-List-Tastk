@@ -2,9 +2,9 @@ import React, {useCallback, useMemo, useState} from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {addProduct} from '../store/productsSlice';
-import Input from '../components/atoms/Input';
-import Button from '../components/atoms/Button';
-import ProductList from '../components/organisms/ProductList';
+import Input from '@components/atoms/Input';
+import Button from '@components/atoms/Button';
+import ProductList from '@components/organisms/ProductList';
 import {RootState} from '../store';
 
 const ProductListPage = () => {
@@ -52,7 +52,7 @@ const ProductListPage = () => {
           title="Add Product"
           onPress={handleAddProduct}
           style={styles.addButton}
-          disabled={!!productName && !!productPrice}
+          // disabled={!!productName && !!productPrice}
         />
 
         <View style={styles.total}>
