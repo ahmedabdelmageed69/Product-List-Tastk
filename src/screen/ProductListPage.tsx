@@ -33,6 +33,13 @@ const ProductListPage = () => {
     return products.reduce((sum, product) => sum + product.price, 0);
   }, [products]);
 
+  console.log('====================================');
+  console.log(
+    '!!productName && !!productPrice :',
+    !!productName && !!productPrice,
+  );
+  console.log('====================================');
+
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -52,7 +59,7 @@ const ProductListPage = () => {
           title="Add Product"
           onPress={handleAddProduct}
           style={styles.addButton}
-          // disabled={!!productName && !!productPrice}
+          disabled={!productName && !productPrice}
         />
 
         <View style={styles.total}>
